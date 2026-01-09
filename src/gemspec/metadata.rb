@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Gemspec
   class Metadata
     # @param lib_name [String]
