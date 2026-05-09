@@ -1,24 +1,7 @@
-GIT
-  remote: https://github.com/pyrsmk/run.git
-  revision: bea71de4ff649c1e063bf40c39cd3431927be90f
-  branch: 3.0.0
-  specs:
-    run_tasks (3.0.0)
-      rb_gemspec (~> 0.1.0)
-      rb_markdown (~> 0.1.0)
-      rb_monkey (~> 0.1.0)
-      tty-prompt (~> 0.23.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
     diff-lcs (1.6.2)
-    pastel (0.8.0)
-      tty-color (~> 0.5)
-    rb_gemspec (0.1.0)
-    rb_markdown (0.1.0)
-      rb_monkey (~> 0.1.0)
-    rb_monkey (0.1.0)
     rspec (3.12.0)
       rspec-core (~> 3.12.0)
       rspec-expectations (~> 3.12.0)
@@ -32,24 +15,22 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.12.0)
     rspec-support (3.12.2)
-    tty-color (0.6.0)
-    tty-cursor (0.7.1)
-    tty-prompt (0.23.1)
-      pastel (~> 0.8)
-      tty-reader (~> 0.8)
-    tty-reader (0.9.0)
-      tty-cursor (~> 0.7)
-      tty-screen (~> 0.8)
-      wisper (~> 2.0)
-    tty-screen (0.8.2)
-    wisper (2.0.1)
 
 PLATFORMS
   ruby
+  x86_64-darwin-25
 
 DEPENDENCIES
   rspec (~> 3.12.0)
-  run_tasks!
+
+CHECKSUMS
+  bundler (4.0.11) sha256=5bcec0fb78302e48d02ee46f10ee6e6942be647ba5b44a6d1ddfda9a240ce785
+  diff-lcs (1.6.2) sha256=9ae0d2cba7d4df3075fe8cd8602a8604993efc0dfa934cff568969efb1909962
+  rspec (3.12.0) sha256=ccc41799a43509dc0be84070e3f0410ac95cbd480ae7b6c245543eb64162399c
+  rspec-core (3.12.3) sha256=782189dea5ac28971d2a613ff7bf28b4c4e326ec3f0503c773307671269b6f0d
+  rspec-expectations (3.12.4) sha256=846ff8968551a775c4c949825d581f394a517bdf78b68feac471282a1b03e75c
+  rspec-mocks (3.12.7) sha256=b2f10a7879781de9448f28e5dc399277d4eac14d577b450e4c04b7897fe4c6a8
+  rspec-support (3.12.2) sha256=de719abdc9d03842c96052be4a2dab8d7fd9314d0b2488b0f755008d071b761d
 
 BUNDLED WITH
-   1.17.3
+  4.0.11

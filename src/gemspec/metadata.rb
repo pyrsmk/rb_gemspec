@@ -10,14 +10,19 @@ module Gemspec
     # @return [Hash]
     def read
       @_read ||= (
-        path = "#{__dir__}/../../#{@lib_name}.gemspec"
+        spec = Gem.loaded_specs[@lib_name]
 
-        # Development.
-        if File.exist?(path)
-          Gem::Specification::load(path)
+        # Development: gem loaded from a local path (not from the gems directory).
+        if spec && !spec.gem_dir.start_with?(Gem.paths.home)
+          Gem::Specification::load(File.join(spec.gem_dir, "#{@lib_name}.gemspec"))
         # Production.
         else
-          Gem::Specification::find_by_name(@lib_name) rescue nil
+          spec ||
+            begin
+              Gem::Specification::find_by_name(@lib_name)
+            rescue StandardError, Gem::LoadError
+              nil
+            end
         end
       )
     end

@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name          = "rb_gemspec"
-  s.version       = "0.1.1"
+  s.version       = "0.2.0"
   s.summary       = "Gemspec helper"
   s.authors       = ["Aurélien Delogu"]
   s.email         = "aurelien.delogu@gmail.com"
