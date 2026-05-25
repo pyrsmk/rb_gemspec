@@ -17,12 +17,11 @@ module Gemspec
           Gem::Specification::load(File.join(spec.gem_dir, "#{@lib_name}.gemspec"))
         # Production.
         else
-          spec ||
-            begin
-              Gem::Specification::find_by_name(@lib_name)
-            rescue StandardError, Gem::LoadError
-              nil
-            end
+          spec || begin
+                    Gem::Specification::find_by_name(@lib_name)
+                  rescue StandardError, Gem::LoadError, Gem::MissingSpecError
+                    nil
+                  end
         end
       )
     end
