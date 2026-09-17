@@ -13,8 +13,9 @@ module Gemspec
         spec = Gem.loaded_specs[@lib_name]
 
         # Development: gem loaded from a local path (not from the gems directory).
-        if spec && !spec.gem_dir.start_with?(Gem.paths.home)
-          Gem::Specification::load(File.join(spec.gem_dir, "#{@lib_name}.gemspec"))
+        gemspec_path = File.join(spec.gem_dir, "#{@lib_name}.gemspec") if spec
+        if spec && !spec.gem_dir.start_with?(Gem.paths.home) && File.exist?(gemspec_path)
+          Gem::Specification::load(gemspec_path)
         # Production.
         else
           spec || begin
